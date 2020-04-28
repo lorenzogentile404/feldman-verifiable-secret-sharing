@@ -17,7 +17,7 @@ def isprime(n):
     return True 
 
 # Pick q, p primes such that q | p - 1, that is equvalent to
-# say that p = r*q + 1 for some q
+# say that p = r*q + 1 for some r
 
 # Choose q
 while True:
@@ -98,7 +98,7 @@ for i in range(1,7):
 print(s)
 
 # Parties cooperating to reconstruct the secret
-B = [2,5,6]
+B = [1,2,3]
 
 def delta(i):
     d = 1
@@ -118,4 +118,3 @@ for i in B:
     a0_reconstructed += delta(i)*s[i - 1]
 
 print(a0_reconstructed % q)
-print("The secret polynomium is: " + str(a0) + " + " +  str(a1) + "x + " + str(a2) + "x^2")
