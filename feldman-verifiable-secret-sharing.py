@@ -59,8 +59,8 @@ print("\nG = ")
 print(G)
 print("Order of G is " + str(len(G)) + ". This must be equal to q.")        
 
-# Generator of G (since G is of prime order q, any of its elements is a generator)
-g = random.choice(G)
+# Since the order of G is prime, any element of G except 1 is a generator
+g = random.choice(list(filter(lambda g: g != 1, G)))
 print("\ng = " + str(g))
 
 # Secret taken from the group Z_q* 
